@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+   <title>Smith Mountain Retreat</title>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+   <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+   <!--MENU BAR-->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+         <a class="navbar-brand fw-bold" href="index.html">Smith Mountain Retreat</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+               <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+               <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+               <li class="nav-item"><a class="nav-link" href="activities.html">Activities</a></li>
+               <li class="nav-item"><a class="nav-link" href="calendar.html">Calendar</a></li>
+               <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+   <div class="side-brand home"><a class="navbar-brand fw-bold text-white" href="index.html">Smith Mountain Retreat</a></div>
+   
+   <!--PARALLAX SPLASH IMAGES-->
+   <div class="slide parallax-window" data-parallax="scroll" data-image-src="images/first.webp" data-z-index="1"></div>
+	<div class="slide parallax-window" data-parallax="scroll" data-image-src="images/second.webp" data-z-index="1"></div>
+	<div class="slide parallax-window" data-parallax="scroll" data-image-src="images/third.webp" data-z-index="1"></div>
+   
+   <!--NAME TAG-->
+   <div id="name-stop" class="container-fluid p-0"><div class="w-100 py-5" style="background-color: #2f2e2e;"></div></div>
+   <div class="side-brand"><a class="navbar-brand fw-bold" href="index.html">Smith Mountain Retreat</a></div>
+	
+   <!--LOWER TRIFOLD-->
+   <div class="slide cards-slide">
+      <div class="container-fluid px-4">
+         <div class="row g-4">
+            <div class="col-md-4"> <a href="gallery.html" class="d-inline-block">
+               <div class="card h-100 shadow"> <img src="images/photographyTobySmith.webp?random=4" class="card-img-top" alt="Card image 1">
+                  <div class="card-img-overlay text-white text-center d-flex flex-column align-items-center">
+                     <p class="card-title card-link">Gallery</p>
+                  </div>
+               </div>
+            </a> </div>
+            <div class="col-md-4"> <a href="activities.html" class="d-inline-block">
+               <div class="card h-100 shadow"> <img src="images/videographyTobySmith.webp?random=5" class="card-img-top" alt="Card image 2">
+                  <div class="card-img-overlay text-white d-flex flex-column align-items-center">
+                     <p class="card-title card-link">Activities</p>
+                  </div>
+               </div>
+            </a> </div>
+            <div class="col-md-4"> <a href="about.html" class="d-inline-block">
+               <div class="card h-100 shadow"> <img src="images/modelingTobySmith.webp?random=6" class="card-img-top" alt="Card image 3">
+                  <div class="card-img-overlay text-white d-flex flex-column align-items-center">
+                     <p class="card-title card-link">About</p>
+                  </div>
+               </div>
+            </a> </div>
+         </div>
+      </div>
+   </div>
+	
+	<hr>
+	
+   <!--FOOTER-->
+	<div class="slide footer">
+      <div class="container-fluid px-4">
+         <div class="row g-3 align-items-center">
+            <div class="col-lg-6 col-md-12">
+               <h6 class="mb-2">Don't hesitate to contact me to discuss a possible project or learn more about my work.</h6>
+            </div>
+		      <div class="col-lg-3 col-md-6 text-start lulo">Contact:<br>
+               <a class="text-footer text-decoration-none lulo text-break small" href="mailto:tobyosmith01@gmail.com">tobyosmith01@gmail.com</a><br>
+               <a class="text-footer text-decoration-none small" href="tel:+15408100505">540-810-0505</a>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+		         <p class="mb-3 mb-md-0 copyright">© 2025 Toby Smith</p>
+            </div>
+         </div>
+      </div>
+      <button id="backToTop" class="btn btn-primary rounded-circle"><i class="fas fa-arrow-up"></i></button>
+   </div>
+
+	<div class="indicators" id="indicators"></div>
+
+   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
+   <script src="js/parallax.min.js"> </script>
+	<script src="js/common.js"> </script>
+	<script src="js/homeScripts.js"></script>
+	<script>
+		const indicatorsContainer = document.getElementById('indicators');
+      function removeIndicator(index) {
+	      const indicators = indicatorsContainer.querySelectorAll('.dot'); 
+         if (index >= 0 && index < indicators.length) {
+		      const indicatorToRemove = indicators[index];
+		      indicatorsContainer.removeChild(indicatorToRemove); 
+	      } else {
+		      console.warn('Invalid index for indicator removal');
+	      }
+	   }
+    removeIndicator(4);
+	</script>
+   
+</body>
+</html>

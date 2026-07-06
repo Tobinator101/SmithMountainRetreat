@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Calendar | Smith Mountain Retreat</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body class="calendar-body">
+
+<!-- NAVBAR -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+         <a class="navbar-brand fw-bold" href="index.html">Smith Mountain Retreat</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+               <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+               <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+               <li class="nav-item"><a class="nav-link" href="activities.html">Activities</a></li>
+               <li class="nav-item"><a class="nav-link" href="calendar.html">Calendar</a></li>
+               <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+<div style="height:110px;background:#2f2e2e;"></div>
+
+<hr>
+
+<!-- CALENDAR -->
+<section class="calendar-page">
+
+    <div class="calendar-container">
+        <iframe
+            src="https://calendar.google.com/calendar/embed?src=4f336c9d4753efbdd8d7590624975d484fcaa65e45a826d79102a2f244cf6b06%40group.calendar.google.com&ctz=America%2FNew_York"
+            loading="lazy"
+            scrolling="no">
+        </iframe>
+    </div>
+</section>
+
+<hr>
+
+<!-- FOOTER -->
+<div class="slide footer">
+    <div class="container-fluid px-4">
+        <div class="row g-3 align-items-center">
+
+            <div class="col-lg-6">
+                <h6 class="mb-2">
+                    Don't hesitate to contact me to discuss a possible project or learn more about my work.
+                </h6>
+            </div>
+
+            <div class="col-lg-3 text-start lulo">
+                Contact:<br>
+                <a class="text-footer text-decoration-none small"
+                   href="mailto:tobyosmith01@gmail.com">
+                    tobyosmith01@gmail.com
+                </a><br>
+
+                <a class="text-footer text-decoration-none small"
+                   href="tel:+15408100505">
+                    540-810-0505
+                </a>
+            </div>
+
+            <div class="col-lg-3 text-center">
+                <p class="mb-0 copyright">
+                    © 2025 Toby Smith
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <button id="backToTop"
+            class="btn btn-primary rounded-circle">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script src="js/common.js"></script>
+
+</body>
+</html>
