@@ -57,6 +57,10 @@ h4 {
 .expo h4 {
     background-color: rgba(5, 47, 70, 1);
     filter: drop-shadow(0 8px 8px rgba(0, 0, 0, 0.6));
+    border-top-right-radius: 0;
+    border-top-left-radius: 10px;
+    padding: 15px 15px 15px 65px;
+    text-align: right;
 }
 
 .web h4 {
@@ -67,6 +71,15 @@ h4 {
 .documentary h4 {
     background-color: rgba(191, 173, 46, 1);
     filter: drop-shadow(0 8px 8px rgba(0, 0, 0, 0.6));
+    border-top-right-radius: 0;
+    border-top-left-radius: 10px;
+    padding: 15px 15px 15px 65px;
+    text-align: right;
+}
+
+.expo,
+.documentary {
+    text-align: right;
 }
 
 h5 {
@@ -831,6 +844,10 @@ a:hover .card-text {
     border-radius: 8px;
 }
 
+.ratio img {
+    border-radius: 8px;
+}
+
 /* ===========================
    SKETCHFAB EMBED
    =========================== */
@@ -880,6 +897,12 @@ a:hover .card-text {
     
     h4 {
         padding: 8px 35px 8px 8px !important;
+    }
+    
+    .expo h4,
+    .documentary h4 {
+        padding: 8px 8px 8px 35px !important;
+        text-align: right;
     }
     
     .video-color-travel {
@@ -1066,13 +1089,14 @@ a:hover .card-text {
     }
 }
 
+
 body.calendar-body{
     overflow:hidden;
     background:#2f2e2e;
 }
 
 .calendar-page{
-    height:calc(100vh - 205px);
+    height:calc(100vh - 286px);
     padding:20px;
     background:#2f2e2e;
 }
