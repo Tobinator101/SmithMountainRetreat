@@ -1064,12 +1064,6 @@ a:hover .card-text {
         line-height: 1.15;
         white-space: normal;
     }
-
-    .brand-line1,
-    .brand-line2 {
-        display: block;
-        white-space: nowrap;
-    }
     
     .navbar-collapse {
         margin-top: 0.5rem;
