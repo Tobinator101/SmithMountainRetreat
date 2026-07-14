@@ -222,7 +222,7 @@ hb {
    brand wraps to two lines)
    =========================== */
 .nav-spacer {
-    height: 110px;
+    height: var(--navbar-height, 110px);
     background-color: #2f2e2e;
 }
 
@@ -231,12 +231,8 @@ hb {
 }
 
 @media (max-width: 1301px) {
-    .nav-spacer {
-        height: 160px;
-    }
-
     .nav-spacer.home-spacer {
-        height: 160px;
+        height: var(--navbar-height, 110px);
         background-color: transparent;
     }
 }
@@ -1057,6 +1053,7 @@ a:hover .card-text {
 
     .navbar > .container-fluid {
         align-items: flex-end;
+        flex-wrap: nowrap;
     }
     
     .navbar-toggler {
