@@ -1052,12 +1052,11 @@ a:hover .card-text {
     }
 
     .navbar > .container-fluid {
-        align-items: flex-end;
-        flex-wrap: nowrap;
+        align-items: flex-start;
     }
     
     .navbar-toggler {
-        align-self: flex-end;
+        align-self: flex-start;
     }
     
     .navbar-brand {
@@ -1067,6 +1066,7 @@ a:hover .card-text {
     
     .navbar-collapse {
         margin-top: 0.5rem;
+        flex-basis: 100%;
     }
     
     .navbar-collapse .navbar-nav .nav-item {
