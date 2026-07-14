@@ -13,7 +13,7 @@
    <!--MENU BAR-->
    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-         <a class="navbar-brand fw-bold" href="index.html">Smith&nbsp;Mountain Retreat</a>
+         <a class="navbar-brand fw-bold" href="index.html"><span class="brand-line1">Smith Mountain</span><span class="brand-line2">Retreat</span></a>
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
          <span class="navbar-toggler-icon"></span>
          </button>
@@ -30,6 +30,7 @@
    </nav>
 
    <div class="side-brand"><a class="navbar-brand fw-bold" href="index.html">Smith&nbsp;Mountain Retreat</a></div>
+   <div class="nav-spacer home-spacer"></div>
    <div class="parallax-window" data-parallax="scroll" data-image-src="images/activities-header.webp" data-z-index="1"></div>
 
    <hr>
@@ -158,7 +159,48 @@
    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
    <script src="js/parallax.min.js"> </script>
-   <script src="js/common.js"> </script>
+   <script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+  navLinks.forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
+    }
+  });
+});
+
+function setNavHeightVar() {
+  const navbar = document.querySelector('.navbar');
+  if (navbar) {
+    document.documentElement.style.setProperty('--navbar-height', navbar.offsetHeight + 'px');
+  }
+}
+setNavHeightVar();
+window.addEventListener('load', setNavHeightVar);
+window.addEventListener('resize', setNavHeightVar);
+
+const backToTopButton = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTopButton.style.display = 'block';
+  } else {
+    backToTopButton.style.display = 'none';
+  }
+});
+
+backToTopButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+   </script>
    <script src="js/side-branding.js"> </script>
    
 </body>

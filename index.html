@@ -97,7 +97,48 @@
    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
    <script src="js/parallax.min.js"> </script>
-	<script src="js/common.js"> </script>
+	<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+  navLinks.forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
+    }
+  });
+});
+
+function setNavHeightVar() {
+  const navbar = document.querySelector('.navbar');
+  if (navbar) {
+    document.documentElement.style.setProperty('--navbar-height', navbar.offsetHeight + 'px');
+  }
+}
+setNavHeightVar();
+window.addEventListener('load', setNavHeightVar);
+window.addEventListener('resize', setNavHeightVar);
+
+const backToTopButton = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTopButton.style.display = 'block';
+  } else {
+    backToTopButton.style.display = 'none';
+  }
+});
+
+backToTopButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+	</script>
 	<script src="js/homeScripts.js"></script>
 	<script>
 		const indicatorsContainer = document.getElementById('indicators');
