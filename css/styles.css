@@ -266,12 +266,12 @@ hb {
    DOT INDICATORS
    =========================== */
 .indicators {
+    display: none;
     position: fixed;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-    display: flex;
     flex-direction: column;
     gap: 10px;
 }
@@ -877,6 +877,10 @@ a:hover .card-text {
 @media (max-width: 768px) {
     .card-img-overlay {
         text-align: center;
+        top: auto;
+        height: 33%;
+        opacity: 1;
+        transform: translateY(0);
     }
     
     .travel h4 {
@@ -923,6 +927,25 @@ a:hover .card-text {
     
     .gallery-container {
         column-count: 2;
+    }
+
+    .parallax-window {
+        min-height: 0;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .slide.parallax-window {
+        min-height: 0;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+/* Tablet/mobile - stacked activity text needs breathing room under its image */
+@media (max-width: 991px) {
+    .travel, .expo, .web, .documentary {
+        margin-top: 1.5rem;
     }
 }
 
@@ -1008,6 +1031,8 @@ a:hover .card-text {
     
     .navbar-brand {
         line-height: normal;
+        white-space: normal;
+        max-width: 70%;
     }
     
     .navbar-collapse {
