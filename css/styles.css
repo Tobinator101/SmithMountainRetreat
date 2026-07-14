@@ -216,6 +216,32 @@ hb {
 }
 
 /* ===========================
+   NAV SPACER
+   (pushes page content below the fixed navbar;
+   the navbar grows taller on mobile since the
+   brand wraps to two lines)
+   =========================== */
+.nav-spacer {
+    height: 110px;
+    background-color: #2f2e2e;
+}
+
+.nav-spacer.home-spacer {
+    height: 0;
+}
+
+@media (max-width: 1301px) {
+    .nav-spacer {
+        height: 160px;
+    }
+
+    .nav-spacer.home-spacer {
+        height: 160px;
+        background-color: transparent;
+    }
+}
+
+/* ===========================
    BACK TO TOP BUTTON
    =========================== */
 #backToTop {
@@ -1028,11 +1054,24 @@ a:hover .card-text {
         height: auto;
         padding: 1rem;
     }
+
+    .navbar > .container-fluid {
+        align-items: flex-end;
+    }
+    
+    .navbar-toggler {
+        align-self: flex-end;
+    }
     
     .navbar-brand {
-        line-height: normal;
+        line-height: 1.15;
         white-space: normal;
-        max-width: 70%;
+    }
+
+    .brand-line1,
+    .brand-line2 {
+        display: block;
+        white-space: nowrap;
     }
     
     .navbar-collapse {
