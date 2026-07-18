@@ -866,7 +866,7 @@ a:hover .card-text {
         margin-top: 2rem;
         margin-bottom: 2rem;
         margin-left: 0.6em;
-        margin-right: 0.6rem;
+        padding-right: 0.6em;
     }
 }
 
