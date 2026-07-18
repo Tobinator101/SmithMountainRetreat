@@ -835,6 +835,39 @@ a:hover .card-text {
 }
 
 /* ===========================
+   ABOUT TEXT BLOCK
+   (color block behind the About page text,
+   sized to match the adjacent image's height,
+   same gray/rounding/shadow as the navbar.
+   Height is set exactly via JS to match the image;
+   width simply fills the column so its right edge
+   lines up with the container's padding, same as
+   the image's left edge.)
+   =========================== */
+.about-text-block {
+    background-color: #2f2e2e;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    margin-top: 0.6em;
+    padding: 0.6em;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: 991px) {
+    .about-text-block {
+        height: auto;
+        min-height: 200px;
+        margin-top: 2rem;
+    }
+}
+
+/* ===========================
    ABOUT SECTION
    =========================== */
 .about {
@@ -868,6 +901,28 @@ a:hover .card-text {
 .ratio img {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
+}
+
+/* ===========================
+   ACTIVITIES PAGE BACKGROUND
+   =========================== */
+.activities-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.activities-bg .text-image-section {
+    background-color: transparent;
+}
+
+@media (max-width: 991px) {
+    .activities-bg {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center;
+    }
 }
 
 /* ===========================
