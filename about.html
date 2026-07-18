@@ -32,15 +32,19 @@
    <div class="nav-spacer"></div>
 
    <hr>
-   <section class="text-image-section about">
+   <section class="text-image-section about" style="background-image: url('images/SmithMountainVintage.webp'); background-size: cover; background-position: top; background-repeat: no-repeat;">
       <div class="container">
-         <div class="row align-items-center">
+         <div class="row align-items-stretch">
             <div class="col-lg-7">
-               <div class="image-container"> <img src="images/galleryPhotos/image-14.webp" alt="About Toby Smith" class="section-image img-fluid mx-auto d-block"> </div>
+               <div class="image-container"> <img id="about-image" src="images/galleryPhotos/image-14.webp" alt="About Toby Smith" class="section-image img-fluid mx-auto d-block"> </div>
             </div>
-            <div class="col-lg-5">
-               <p class="section-text text-white">Grandpa and stuff.</p>
-               <p class="section-text text-white">Family mountain</p>
+            <div class="col-lg-5 px-lg-3">
+               <div class="about-text-block" id="about-text-block">
+                  <p class="section-text text-white" style="margin-left: 2rem;">Grandpa</p>
+                  <p class="section-text text-white" style="margin-left: 2rem;">Family mountain</p>
+                  <p class="section-text text-white" style="margin-left: 2rem;">Milboro</p>
+                  <p class="section-text text-white" style="margin-left: 2rem;">Stuff</p>
+               </div>
             </div>
          </div>
       </div>
@@ -108,6 +112,20 @@ backToTopButton.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
+
+function setAboutBlockHeight() {
+  const img = document.getElementById('about-image');
+  const block = document.getElementById('about-text-block');
+  if (!img || !block) return;
+  if (window.innerWidth >= 992) {
+    block.style.height = img.offsetHeight + 'px';
+  } else {
+    block.style.height = '';
+  }
+}
+setAboutBlockHeight();
+window.addEventListener('load', setAboutBlockHeight);
+window.addEventListener('resize', setAboutBlockHeight);
 </script>
 </body>
 </html>
