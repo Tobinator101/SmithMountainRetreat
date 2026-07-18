@@ -865,7 +865,10 @@ a:hover .card-text {
         min-height: 200px;
         margin-top: 2rem;
         margin-bottom: 2rem;
-        padding: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding-left: 1em;
+        padding-right: 1em;
     }
 }
 
